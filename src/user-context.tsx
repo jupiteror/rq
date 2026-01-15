@@ -1,9 +1,9 @@
-import {createContext} from "react";
-import type {User} from "./users.tsx";
+import { createContext } from "react";
+import type { User } from "./type/user.type";
 
+export type IUserType = {
+  user: User | null;
+  setUser: (user: User | null) => void;
+};
 
-const UserContext = createContext<User[] | null>(null);
-
-
-
-export {UserContext}
+export const UserContext = createContext<IUserType | undefined>(undefined);
