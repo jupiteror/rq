@@ -1,13 +1,7 @@
-import Users from "./users.tsx";
-import { AppProvider } from "./providers/app-provider.tsx";
-import CardPost from "./card/cardBlock.tsx";
+import AppRouter from "./app-router.tsx";
 
 function App() {
-  return (
-    <AppProvider>
-      <CardPost />
-    </AppProvider>
-  );
+  return <AppRouter />;
 }
 
 export default App;

@@ -2,8 +2,8 @@ export type PostType = {
   id: number;
   title: string;
   body: string;
-  tags: string;
-  reactions: ReactionsType[];
+  tags: string[];
+  reactions: ReactionsType;
   views: number;
   userId: number;
 };

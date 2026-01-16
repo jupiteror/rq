@@ -1,16 +1,18 @@
-import { getPosts, type PostsTypeResponse } from "@/api/get/get-posts";
-import { Card } from "@/components/ui/card";
+import { getPosts } from "@/api/get/get-posts";
+
 import { useEffect, useState } from "react";
+import CardComponent from "./CardComponent";
+import type { PostsTypeResponse } from "@/types/response.type";
 
 const CardPost = () => {
-  const [pub, setPub] = useState<PostsTypeResponse | null>(null);
+  const [posts, setPosts] = useState<PostsTypeResponse | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     getPosts()
       .then((res) => {
-        setPub(res);
+        setPosts(res);
       })
       .catch(() => {
         setIsError(true);
@@ -20,18 +22,18 @@ const CardPost = () => {
       });
   }, []);
 
+  // console.log(pub);
+
   if (isLoading) return <div>Load...</div>;
   if (isError) return <div>Error response</div>;
   if (isLoading) return <div>Load...</div>;
   if (isError) return <div>Error response</div>;
 
   return (
-    <div>
-      {pub?.posts.map((post) => (
-        <div key={post.id}>{post.title}</div>
+    <div className="px-20">
+      {posts?.posts.slice(0, 10).map((post) => (
+        <CardComponent posts={post} />
       ))}
-
-      <p>Всего постов: {pub?.total}</p>
     </div>
   );
 };

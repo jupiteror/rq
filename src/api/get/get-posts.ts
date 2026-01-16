@@ -1,14 +1,9 @@
-import { instance } from "../../instance";
-import type { PostType } from "@/types/posts.type";
-
-export type PostsTypeResponse = {
-  limit: number;
-  posts: PostType[];
-  skip: number;
-  total: number;
-};
+import { api } from "@/config/instance";
+import type { PostsTypeResponse } from "@/types/response.type";
 
 export async function getPosts(): Promise<PostsTypeResponse> {
-  const res = await instance.get<PostsTypeResponse>("/posts");
+  const res = await api.get<PostsTypeResponse>("/posts");
+  console.log(res);
+
   return res.data;
 }
