@@ -5,7 +5,7 @@ export type PostType = {
   tags: string;
   reactions: ReactionsType[];
   views: number;
-  userId: 121;
+  userId: number;
 };
 
 type ReactionsType = {

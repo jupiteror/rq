@@ -1,5 +1,5 @@
 import { instance } from "../../instance";
-import type { IUsersResponse, User } from "../../type/user.type";
+import type { IUsersResponse, User } from "../../types/user.type";
 
 export async function getUsers(): Promise<User[]> {
   try {
