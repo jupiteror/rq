@@ -1,7 +1,14 @@
-import axios from "axios";
 import { instance } from "../../instance";
-import type { PostType } from "../../type/posts.type";
+import type { PostType } from "@/types/posts.type";
 
-export async function getPosts(): Promise<PostType> {
-  return await instance.get("/posts").then((res) => res.data);
+export type PostsTypeResponse = {
+  limit: number;
+  posts: PostType[];
+  skip: number;
+  total: number;
+};
+
+export async function getPosts(): Promise<PostsTypeResponse> {
+  const res = await instance.get<PostsTypeResponse>("/posts");
+  return res.data;
 }

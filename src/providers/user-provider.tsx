@@ -1,11 +1,7 @@
 import { useState } from "react";
-import { UserContext } from "../user-context";
-import type { User } from "../type/user.type";
-
-export interface IWrapperProps {
-  children?: React.ReactNode;
-  className?: string;
-}
+import { UserContext } from "../context/user-context";
+import type { User } from "../types/user.type";
+import type { IWrapperProps } from "@/types/wrapper.type";
 
 export type IUserType = {
   user: User;
