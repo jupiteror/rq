@@ -1,7 +1,7 @@
-import CardPost from "@/card/CardPost";
+
 
 const Home = () => {
-  return <CardPost />;
+  return <div>Home Page</div>;
 };
 
 export default Home;

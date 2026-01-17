@@ -6,7 +6,7 @@ export function BaseNavigation() {
     <div>
       {NAVIGATION.map((nav) => (
         <Link key={nav.path} to={nav.path}>
-          <span>{nav.title}</span>
+          <span className="ml-4">{nav.title}</span>
         </Link>
       ))}
     </div>

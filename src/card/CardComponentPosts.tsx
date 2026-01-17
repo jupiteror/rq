@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,14 +11,14 @@ import {
 } from "@/components/ui/card";
 import type { PostType } from "@/types/posts.type";
 
-const CardComponent = ({ posts }: { posts: PostType }) => {
-  console.log(posts);
-
+const CardComponentPosts = ({ posts }: { posts: PostType }) => {
   return (
     <Card className="my-5 " key={posts.id}>
       <CardHeader>
         <CardTitle>{posts?.title}</CardTitle>
-        <CardDescription>{posts?.tags.join(", ")}</CardDescription>
+        <CardDescription className="my-2">
+          <Badge variant="outline">Tags: #{posts?.tags.join(", #")}</Badge>
+        </CardDescription>
         <CardAction>{posts?.userId}</CardAction>
       </CardHeader>
       <CardContent>
@@ -32,4 +33,4 @@ const CardComponent = ({ posts }: { posts: PostType }) => {
   );
 };
 
-export default CardComponent;
+export default CardComponentPosts;

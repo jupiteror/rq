@@ -1,8 +1,9 @@
 import { getPosts } from "@/api/get/get-posts";
 
 import { useEffect, useState } from "react";
-import CardComponent from "./CardComponent";
+
 import type { PostsTypeResponse } from "@/types/response.type";
+import CardComponentPosts from "./CardComponentPosts";
 
 const CardPost = () => {
   const [posts, setPosts] = useState<PostsTypeResponse | null>(null);
@@ -32,7 +33,7 @@ const CardPost = () => {
   return (
     <div className="px-20">
       {posts?.posts.slice(0, 10).map((post) => (
-        <CardComponent posts={post} />
+        <CardComponentPosts key={post.id} posts={post} />
       ))}
     </div>
   );
