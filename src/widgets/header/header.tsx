@@ -1,4 +1,4 @@
-import { ThemeSwitcher } from "@/components/ui/theme-switcher";
+import { ThemeSwitcher } from "@/shared/ui/theme-switcher";
 import { BaseNavigation } from "@/navigation/base-navigation";
 
 export function Header() {

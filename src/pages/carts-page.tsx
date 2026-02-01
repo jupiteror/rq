@@ -1,7 +1,8 @@
 import CardCarts from "@/card/CardCarts";
 
-const Home = () => {
+
+const CartsPage = () => {
   return <CardCarts />;
 };
 
-export default Home;
+export default CartsPage;
