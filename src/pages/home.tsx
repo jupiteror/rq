@@ -1,7 +1,7 @@
-import CardCarts from "@/card/CardCarts";
+import ProductBlock from "../block/product-block";
 
-const Home = () => {
-  return <CardCarts />;
+const HomePage = () => {
+  return <ProductBlock />;
 };
 
-export default Home;
+export default HomePage;
