@@ -4,7 +4,5 @@ type PropsType = {
 };
 
 export function Image({ classname, src }: PropsType) {
-  return (
-    <img src={`${src}`} alt="title" className={`${classname}`} />
-  );
+  return <img src={`${src}`} alt="title" className={`${classname}`} />;
 }

@@ -42,9 +42,7 @@ const ProductBlock = () => {
         <Card key={product.id}>
           <CardHeader>
             <CardTitle className="text-xl">{product.title}</CardTitle>
-            <CardDescription className="text-lg">
-              Category: {product.category}
-            </CardDescription>
+            <CardDescription className="text-lg">Category: {product.category}</CardDescription>
             <CardAction>
               Rating: {product.rating.rate} ({product.rating.count})
             </CardAction>

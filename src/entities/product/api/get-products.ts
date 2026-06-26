@@ -6,4 +6,3 @@ export async function getProducts(): Promise<Product[]> {
   console.log("getProducts res", res.config, res.data);
   return res.data;
 }
- 
