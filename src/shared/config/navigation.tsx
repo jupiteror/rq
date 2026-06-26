@@ -1,4 +1,4 @@
-import { PATHS } from "./paths";
+import { PATHS } from "../../app/rounting/paths.ts";
 
 export const NAVIGATION = [
   {

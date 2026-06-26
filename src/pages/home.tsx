@@ -1,7 +1,9 @@
-import ProductBlock from "../block/product-block";
+import { ProductList } from "@/widgets/product-list";
+
+
 
 const HomePage = () => {
-  return <ProductBlock />;
+  return <ProductList />;
 };
 
 export default HomePage;

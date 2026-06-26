@@ -1,4 +1,4 @@
-import { PATHS } from "@/config/paths";
+import { PATHS } from "@/app/rounting/paths.ts";
 import { Link } from "react-router";
 
 type LogoProps = {

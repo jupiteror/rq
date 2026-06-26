@@ -1,5 +1,5 @@
-import { getProducts } from "@/api/get/get-products";
-import { Button } from "@/shared/ui/button";
+import { getProducts } from "@/entities/product/api/get-products.ts";
+import { Button } from "@/shared/ui/button.tsx";
 import {
   Card,
   CardAction,
@@ -8,8 +8,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shared/ui/card";
-import type { Product } from "@/types/response.type";
+} from "@/shared/ui/card.tsx";
+import type { Product } from "@/types/response.type.ts";
 import { useEffect, useState } from "react";
 
 const ProductBlock = () => {

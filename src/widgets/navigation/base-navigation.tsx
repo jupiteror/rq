@@ -1,4 +1,4 @@
-import { NAVIGATION } from "@/config/navigation";
+import { NAVIGATION } from "@/shared/config/navigation.tsx";
 import { Link } from "react-router";
 
 export function BaseNavigation() {

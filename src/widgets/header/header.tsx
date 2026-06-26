@@ -1,5 +1,5 @@
-import { BaseNavigation } from "@/navigation/base-navigation";
-import { Logo } from "@/shared/logo/logo";
+import { BaseNavigation } from "@/widgets/navigation/base-navigation";
+import { Logo } from "@/shared/ui/logo/logo";
 import { Button } from "@/shared/ui/button";
 import { ShoppingCart } from "lucide-react";
 
